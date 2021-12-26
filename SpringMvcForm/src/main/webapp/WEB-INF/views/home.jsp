@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page isELIgnored="false" %>
+
+
+
     <!doctype html>
 <html lang="en">
   <head>
@@ -10,6 +15,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="<c:url value=""   />">
+<script src="<c:url value="resources/js/script.js"  />"></script>
 
     <title>Hello, world!</title>
   </head>
@@ -27,8 +34,14 @@
                       
                       <form action="handleThisForm" method="post">
                       
+                          <div class="alert alert-danger" role="alert">
+                              <form:errors path="student.*" ></form:errors>
+                              
+                            </div>
+                      
                           <div  class="form-group">
                              <label  for="exampleInputName">Your Name </label>
+    
                              <input class="form-control"
                                     type="text"
                                     name="uname"  
@@ -131,6 +144,7 @@
        
           </div>
      
+     <img alt="image not found" src="<c:url   value="/resources/image/woman02.jpg"   />"   >
    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
